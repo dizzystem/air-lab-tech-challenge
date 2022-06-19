@@ -1,4 +1,4 @@
-package com.example.consumingrest;
+package com.dizzystem.airlab;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -6,7 +6,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Airport {
 
   private String uid, name, iata, icao;
-  private Value lat, lng, alt;
+  private float lat, lng;
+  private int alt;
 
   public Airport() {
   }
@@ -24,13 +25,13 @@ public class Airport {
     return icao;
   }
 
-  public Value getLat() {
+  public float getLat() {
     return lat;
   }
-  public Value getLng() {
+  public float getLng() {
     return lng;
   }
-  public Value getAlt() {
+  public int getAlt() {
     return alt;
   }
 
