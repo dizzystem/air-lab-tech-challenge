@@ -10,12 +10,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AirLabApplication {
 
+	private static final Logger log = LoggerFactory.getLogger(AirLabApplication.class);
+
 	public static void main(String[] args) {
 		SpringApplication.run(AirLabApplication.class, args);
 	}
 	
+	@Bean
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+		return builder.build();
+	}
+	
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("Hello %s!", name);
+		Airport[] airports = restTemplate.getForObject(
+			"https://open-atms.airlab.aero/api/v1/airac/airports", Airport.class);
+		
+		return airports[0].toString();
 	}
 }
