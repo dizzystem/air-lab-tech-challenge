@@ -3,12 +3,11 @@ package com.dizzystem.airlab;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Airport {
-  private String uid, name, iata, icao;
+public class Waypoint {
+  private String uid, name;
   private float lat, lng;
-  private int alt;
 
-  public Airport() {
+  public Waypoint() {
   }
 
   public String getUid() {
@@ -17,33 +16,20 @@ public class Airport {
   public String getName() {
     return name;
   }
-  public String getIata() {
-    return iata;
-  }
-  public String getIcao() {
-    return icao;
-  }
-
   public float getLat() {
     return lat;
   }
   public float getLng() {
     return lng;
   }
-  public int getAlt() {
-    return alt;
-  }
 
   @Override
   public String toString() {
-    return "Airport{" +
+    return "Waypoint{" +
         "uid='" + uid + '\'' +
         ", name='" + name + '\'' +
-        ", iata='" + iata + '\'' +
-        ", icao='" + icao + '\'' +
         ", lat=" + lat +
         ", lng=" + lng +
-        ", alt=" + alt +
         '}';
   }
 }
