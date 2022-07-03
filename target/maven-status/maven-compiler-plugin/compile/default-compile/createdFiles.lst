@@ -1,6 +1,8 @@
 com\dizzystem\airlab\SIDSTAR.class
+com\dizzystem\airlab\AirLabRestController$1.class
 com\dizzystem\airlab\AirLabApplication.class
-com\dizzystem\airlab\WebpageController$1.class
+com\dizzystem\airlab\AirLabApplication$1.class
+com\dizzystem\airlab\AirLabRestController.class
 com\dizzystem\airlab\Airport.class
 com\dizzystem\airlab\WebpageController.class
 com\dizzystem\airlab\Waypoint.class
