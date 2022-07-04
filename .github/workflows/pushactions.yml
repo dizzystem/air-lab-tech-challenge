@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       
       - name: Build Docker image
-        run: docker build . --tag latest
+        run: docker build . --tag dizzystem/air-lab-tech-challenge
 
       - name: Push Docker image
         run: docker push dizzystem/air-lab-tech-challenge
